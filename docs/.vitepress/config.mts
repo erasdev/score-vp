@@ -6,7 +6,7 @@ export default defineConfig({
   description: "Sheet Collection & Organized Reader Experience",
   head: [
       ['script', { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'}],
-      ['script', {src: 'netlify-identity-script.js'}]
+      ['script', {src: '/netlify-identity-script.js'}]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -28,5 +28,9 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
     ]
+  },
+  // Add this to ensure admin routes are handled correctly
+  rewrites: {
+    'admin/:path*': 'public/admin/:path*'
   }
 })
