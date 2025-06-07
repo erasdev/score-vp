@@ -1,0 +1,67 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "docs/public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "docs/index.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "doc"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"} backend:
+  name: git-gateway
+  branch: master
+
+local_backend: true
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "site"
+    label: "Site Settings"
+    description: >
+        Edit design variables used for styling the UI.
+    files:
+      - file: "public/site-config.json"
+        label: "Site Configuration"
+        name: "site-config"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string", required: true }
+          - { label: "Site Description", name: "description", widget: "text", required: false }
+
+          - { label: "Background Color", name: "color-background", widget: "color", required: false }
+
+          - { label: "Light Surface Color", name: "color-surface-light", widget: "color", required: false }
+          - { label: "Dark Surface Color", name: "color-surface-dark", widget: "color", required: false }
+
+          - { label: "Light Text Color", name: "color-text-light", widget: "color", required: false }
+          - { label: "Dark Text Color", name: "color-text-dark", widget: "color", required: false }
+
+          - { label: "Light Accent Color", name: "color-accent-light", widget: "color", required: false }
+          - { label: "Dark Accent Color", name: "color-accent-dark", widget: "color", required: false }
+
+  - name: "pdfs"
+    label: "PDFs"
+    label_singular: "Pdf"
+    folder: "content/pdfs"
+    description: >
+      Collection of sheet music, tablature, or any PDf files to be displayed.
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: "Title", name: "title", widget: "string", required: true }
+      - { label: "Artists", name: "artists", widget: "list", required: false }
+      - { label: "Instruments", name: "instruments", widget: "list", required: false  }
+      - { label: "Genres", name: "genres", widget: "list", required: false  }
+      - { label: "Description", name: "description", widget: "text", required: false  }
+      - { label: "PDF File", name: "file", widget: "file", media_library: { config: { multiple: false } }, required: true  }
+      - { label: "Tags", name: "tags", widget: "list", required: false  }
