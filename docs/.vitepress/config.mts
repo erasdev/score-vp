@@ -4,6 +4,10 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "SCORE",
   description: "Sheet Collection & Organized Reader Experience",
+  head: [
+      ['script', { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'}],
+      ['script', {src: 'netlify-identity-script.js'}]
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
