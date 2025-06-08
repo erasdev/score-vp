@@ -1,6 +1,11 @@
 {
   "title": "Ricky Bob Dog's Collection",
   "description": "A collection of musical scores and arrangements.",
+  "favorites-description": "A collection of my favorite pieces.",
+  "accent-color": "#646cff",
+  "genre-badge-color": "#166534",
+  "instrument-badge-color": "#0066cc",
+  "tag-badge-color": "#2c662d",
   "color-background": "#ffffff",
   "color-surface-light": "#ffffff",
   "color-surface-dark": "#f3f4f6",

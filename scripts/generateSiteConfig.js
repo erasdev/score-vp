@@ -3,14 +3,13 @@ import { join } from 'node:path';
 
 const defaultConfig = {
   title: "Ricky Bob Dog's Collection",
-  description: "A collection of musical scores and arrangements.",
-  "color-background": '#ffffff',
-  "color-surface-light": '#ffffff',     
-  "color-surface-dark": '#f3f4f6',
-  "color-text-light": '#6b7280',
-  "color-text-dark": '#1f2937',
-  "color-accent-light": '#4f46e5',
-  "color-accent-dark": '#155e75',
+  description: "A curated collection of sheet music.",
+  "tagline": "Sheet music for everyone.",
+  "favorites-description": "A collection of my favorite pieces.",
+  "accent-color": "#646cff",
+  "genre-badge-color": "#166534",
+  "instrument-badge-color": "#0066cc",
+  "tag-badge-color": "#2c662d"
 };
 
 // Ensure the public directory exists

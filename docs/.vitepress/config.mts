@@ -32,14 +32,20 @@ export default defineConfig({
   title: "Ricky Bob Dog's Collection",
   description: "A curated collection of sheet music",
   head: [
-    ['script', { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js'}],
-    ['script', {src: '/netlify-identity-script.js'}]
+    ['script', { 
+      src: 'https://identity.netlify.com/v1/netlify-identity-widget.js',
+      type: 'text/javascript'
+    }],
+    ['script', {
+      src: '/netlify-identity-script.js',
+      type: 'text/javascript',    
+    }]
   ],
   themeConfig: {
     siteTitle: false,
     logo: {
       light: '/dog.svg',
-      dark: '/dog.svg',
+      dark: '/dog-inverted.svg',
       alt: 'Ricky Bob Dog'
     },
     nav: [

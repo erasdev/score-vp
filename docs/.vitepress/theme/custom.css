@@ -1,10 +1,34 @@
-/* Custom theme styles */
 :root {
-  --vp-c-brand: #646cff;
-  --vp-c-brand-light: #747bff;
+  /* Brand Color */
+  --vp-c-brand-1: #646cff;
+  
+  /* Badge Colors */
+  --genre-badge-color: #166534;
+  --genre-badge-color-light: #dcfce7;
+  --instrument-badge-color: #0066cc;
+  --instrument-badge-color-light: #e6f3ff;
+  --tag-badge-color: #2c662d;
+  --tag-badge-color-light: #f0f7e6;
 }
 
+/* Badge Styles */
+.badge-genre {
+  background-color: var(--genre-badge-color-light);
+  color: var(--genre-badge-color);
+  border-color: var(--genre-badge-color);
+}
 
+.badge-instrument {
+  background-color: var(--instrument-badge-color-light);
+  color: var(--instrument-badge-color);
+  border-color: var(--instrument-badge-color);
+}
+
+.badge-tag {
+  background-color: var(--tag-badge-color-light);
+  color: var(--tag-badge-color);
+  border-color: var(--tag-badge-color);
+}
 
 /* Hide site title and logo in the nav bar on the home page */
 .VPNav:has(.home) .title {
@@ -15,4 +39,9 @@
 .title a .logo {
   margin-left: 25px;
   transform: scale(2.5);
+}
+
+/* Ensure dark mode logo is used */
+:root.dark .VPImage {
+  content: url('/dog-inverted.svg');
 }

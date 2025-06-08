@@ -7,6 +7,11 @@ const rootDir = join(__dirname, '..');
 
 // Helper function to convert text to sentence case
 const toSentenceCase = (text) => {
+  // Special case for "old-time"
+  if (text === 'old-time') {
+    return 'Old-Time';
+  }
+  
   // First convert to lowercase
   const lowerText = text.toLowerCase();
   
@@ -50,7 +55,7 @@ if (!existsSync(genresDir)) {
 // Generate a page for each top genre
 topGenres.forEach(genre => {
   // Find all PDFs that belong to this genre
-  const instrumentPdfs = pdfIndex.filter(entry => 
+  const genrePdfs = pdfIndex.filter(entry => 
     entry.genres.includes(genre)
   );
 
@@ -66,7 +71,7 @@ next: false
 
 # ${sentenceCaseGenre} Sheet Music
 
-${instrumentPdfs.map(pdf => {
+${genrePdfs.map(pdf => {
   const artistText = pdf.artists?.length ? ` - ${pdf.artists.join(', ')}` : '';
   return `- [${pdf.title}](/content/${pdf.slug})${artistText}`;
 }).join('\n')}
