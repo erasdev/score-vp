@@ -35,7 +35,7 @@ next: false
 
 # ${entry.title}
 
-${entry.artists?.length ? `By ${entry.artists.join(', ')}` : ''}
+${entry.artists?.length ? `${entry.artists.join(', ')}` : ''}
 
 ${entry.description || ''}
 
