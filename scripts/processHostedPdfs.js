@@ -31,7 +31,8 @@ const pdfFiles = readdirSync(pdfsDir)
       tags: frontmatter.tags || [],
       genres: frontmatter.genres || [],
       instruments: frontmatter.instruments || [],
-      artists: frontmatter.artists || []
+      artists: frontmatter.artists || [],
+      favorite: frontmatter.favorite || false
     };
   });
 

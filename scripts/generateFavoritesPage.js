@@ -21,13 +21,13 @@ if (!existsSync(contentDir)) {
 
 // Generate the favorites page
 const content = `---
-title: Favorite Sheet Music
+title: Favorites
 aside: false
 prev: false
 next: false
 ---
 
-# Favorite Sheet Music
+# Favorites
 
 ${favoritePdfs.map(pdf => `- [${pdf.title}](/pdfs/${pdf.slug})`).join('\n')}
 `;
