@@ -49,7 +49,7 @@ ${entry.description || ''}
 
 <div class="score-viewer">
   <iframe 
-    src="/uploads/${filename}#toolbar=0&navpanes=0" 
+    src="/uploads/${filename}" 
     width="100%" 
     height="800px" 
     frameborder="0"
