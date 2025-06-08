@@ -36,7 +36,7 @@ const pdfFiles = readdirSync(pdfsDir)
   });
 
 // Create index file
-const indexPath = join(process.cwd(), 'docs', '.vitepress', 'public', 'pdf-index.json');
+const indexPath = join(process.cwd(), 'docs', 'public', 'pdf-index.json');
 writeFileSync(indexPath, JSON.stringify(pdfFiles, null, 2));
 
 console.log('PDF index file generated successfully.');

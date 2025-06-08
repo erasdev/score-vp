@@ -17,7 +17,7 @@ const toSentenceCase = (text) => {
 
 // Read the PDF index
 const pdfIndex = JSON.parse(
-  readFileSync(join(rootDir, 'docs', '.vitepress', 'public', 'pdf-index.json'), 'utf-8')
+  readFileSync(join(rootDir, 'docs', 'public', 'pdf-index.json'), 'utf-8')
 );
 
 // Collect all instruments and their frequencies

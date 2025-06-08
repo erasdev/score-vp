@@ -13,7 +13,7 @@ const defaultConfig = {
 };
 
 // Ensure the VitePress public directory exists
-const vitepressPublicDir = join(process.cwd(), 'docs', '.vitepress', 'public');
+const vitepressPublicDir = join(process.cwd(), 'docs', 'public');
 if (!existsSync(vitepressPublicDir)) {
   mkdirSync(vitepressPublicDir, { recursive: true });
 }
