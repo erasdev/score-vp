@@ -102,7 +102,13 @@ const sidebarItems = pdfIndex
 
 // Write the sidebar data to a file
 const sidebarData = {
-  items: sidebarItems
+  items: [
+    {
+      text: 'All Songs',
+      collapsed: false,
+      items: sidebarItems
+    }
+  ]
 };
 
 const sidebarPath = join(rootDir, 'docs', '.vitepress', 'sidebar.json');
