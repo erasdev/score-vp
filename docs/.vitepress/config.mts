@@ -80,7 +80,7 @@ export default defineConfig({
           {
             theme: 'alt',
             text: 'Make a Request',
-            link: 'https://github.com/vuejs/vitepress'
+            link: '/request'
           }
         ]
       }
