@@ -19,25 +19,28 @@ if (!existsSync(vitepressPublicDir)) {
   mkdirSync(vitepressPublicDir, { recursive: true });
 }
 
-// Write the site configuration to a file in VitePress public directory
-const configPath = join(vitepressPublicDir, 'site-config.json');
+// Paths for source and output config files
+const sourceConfigPath = join(process.cwd(), 'public', 'site-config.json');
+const outputConfigPath = join(vitepressPublicDir, 'site-config.json');
 
-// Check if config already exists and preserve it if it does
-let existingConfig = defaultConfig;
-if (existsSync(configPath)) {
+// Read source config if it exists
+let sourceConfig = {};
+if (existsSync(sourceConfigPath)) {
   try {
-    const fileContent = readFileSync(configPath, 'utf-8');
-    const parsed = JSON.parse(fileContent);
-    // Preserve existing values while ensuring all required fields exist
-    existingConfig = {
-      ...defaultConfig,
-      ...parsed,
-    };
+    const fileContent = readFileSync(sourceConfigPath, 'utf-8');
+    sourceConfig = JSON.parse(fileContent);
   } catch (error) {
-    console.error('Error reading existing config:', error);
+    console.error('Error reading source config:', error);
   }
 }
 
-writeFileSync(configPath, JSON.stringify(existingConfig, null, 2));
+// Merge default config with source config
+const mergedConfig = {
+  ...defaultConfig,
+  ...sourceConfig,
+};
+
+// Write the merged configuration to the output file
+writeFileSync(outputConfigPath, JSON.stringify(mergedConfig, null, 2));
 
 console.log('Site configuration file generated successfully in VitePress public directory.'); 
