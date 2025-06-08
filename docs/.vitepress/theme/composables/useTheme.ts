@@ -24,6 +24,10 @@ const updateCssVariables = (colors: ThemeColors) => {
   
   
   root.style.setProperty('--vp-c-brand-1', colors["accent-color"]);
+
+  root.style.setProperty('--vp-button-brand-bg', colors["accent-color"]);
+  root.style.setProperty('--vp-button-brand-border', colors["accent-color"]);
+
   root.style.setProperty('--genre-badge-color', colors["genre-badge-color"]);
   root.style.setProperty('--instrument-badge-color', colors["instrument-badge-color"]);
   root.style.setProperty('--tag-badge-color', colors["tag-badge-color"]);

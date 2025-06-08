@@ -43,5 +43,5 @@
 
 /* Ensure dark mode logo is used */
 :root.dark .VPImage {
-  content: url('/dog-inverted.svg');
+  content: url('/inverted-dog.svg');
 }
