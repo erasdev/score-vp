@@ -35,7 +35,7 @@ const topInstruments = Object.entries(instrumentFrequency)
   .map(([instrument]) => instrument);
 
 // Ensure the instruments directory exists
-const instrumentsDir = join(rootDir, 'docs', '.vitepress', 'pdfs', 'instruments');
+const instrumentsDir = join(rootDir, 'docs', 'pdfs', 'instruments');
 if (!existsSync(instrumentsDir)) {
   mkdirSync(instrumentsDir, { recursive: true });
 }

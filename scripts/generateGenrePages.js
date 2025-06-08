@@ -47,7 +47,7 @@ const topGenres = Object.entries(genreFrequency)
   .map(([genre]) => genre);
 
 // Ensure the genres directory exists
-const genresDir = join(rootDir, 'docs', '.vitepress', 'pdfs', 'genres');
+const genresDir = join(rootDir, 'docs', 'pdfs', 'genres');
 if (!existsSync(genresDir)) {
   mkdirSync(genresDir, { recursive: true });
 }

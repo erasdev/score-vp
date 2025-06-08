@@ -13,8 +13,8 @@ const pdfIndex = JSON.parse(
 // Find all favorite PDFs
 const favoritePdfs = pdfIndex.filter(entry => entry.favorite);
 
-// Ensure the content directory exists
-const contentDir = join(rootDir, 'docs', '.vitepress', 'pdfs');
+// Ensure the pdfs directory exists
+const contentDir = join(rootDir, 'docs', 'pdfs');
 if (!existsSync(contentDir)) {
   mkdirSync(contentDir, { recursive: true });
 }
