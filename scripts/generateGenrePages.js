@@ -63,13 +63,13 @@ topGenres.forEach(genre => {
   const slug = sentenceCaseGenre.toLowerCase().replace(/\s+/g, '-');
 
   const content = `---
-title: ${sentenceCaseGenre} Sheet Music
+title: ${sentenceCaseGenre}
 aside: false
 prev: false
 next: false
 ---
 
-# ${sentenceCaseGenre} Sheet Music
+# ${sentenceCaseGenre}
 
 ${genrePdfs.map(pdf => {
   const artistText = pdf.artists?.length ? ` - ${pdf.artists.join(', ')}` : '';

@@ -29,7 +29,10 @@ next: false
 
 # Favorites
 
-${favoritePdfs.map(pdf => `- [${pdf.title}](/pdfs/${pdf.slug})`).join('\n')}
+${favoritePdfs.map(pdf => {
+  const artistText = pdf.artists?.length ? ` - ${pdf.artists.join(', ')}` : '';
+  return `- [${pdf.title}](/pdfs/${pdf.slug})${artistText}`;
+}).join('\n')}
 `;
 
 // Create the file path

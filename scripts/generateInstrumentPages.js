@@ -50,13 +50,13 @@ topInstruments.forEach(instrument => {
   const sentenceCaseInstrument = toSentenceCase(instrument);
 
   const content = `---
-title: ${sentenceCaseInstrument} Sheet Music
+title: ${sentenceCaseInstrument}
 aside: false
 prev: false
 next: false
 ---
 
-# ${sentenceCaseInstrument} Sheet Music
+# ${sentenceCaseInstrument}
 
 ${instrumentPdfs.map(pdf => {
   const artistText = pdf.artists?.length ? ` - ${pdf.artists.join(', ')}` : '';
