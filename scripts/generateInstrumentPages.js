@@ -17,7 +17,7 @@ const toSentenceCase = (text) => {
 
 // Read the PDF index
 const pdfIndex = JSON.parse(
-  readFileSync(join(rootDir, 'public', 'pdf-index.json'), 'utf-8')
+  readFileSync(join(rootDir, 'docs', '.vitepress', 'public', 'pdf-index.json'), 'utf-8')
 );
 
 // Collect all instruments and their frequencies
@@ -35,7 +35,7 @@ const topInstruments = Object.entries(instrumentFrequency)
   .map(([instrument]) => instrument);
 
 // Ensure the instruments directory exists
-const instrumentsDir = join(rootDir, 'docs', 'content', 'instruments');
+const instrumentsDir = join(rootDir, 'docs', '.vitepress', 'pdfs', 'instruments');
 if (!existsSync(instrumentsDir)) {
   mkdirSync(instrumentsDir, { recursive: true });
 }
@@ -60,7 +60,7 @@ next: false
 
 ${instrumentPdfs.map(pdf => {
   const artistText = pdf.artists?.length ? ` - ${pdf.artists.join(', ')}` : '';
-  return `- [${pdf.title}](/content/${pdf.slug})${artistText}`;
+  return `- [${pdf.title}](/pdfs/${pdf.slug})${artistText}`;
 }).join('\n')}
 `;
 
@@ -79,7 +79,7 @@ const instrumentNavItem = {
     const sentenceCaseInstrument = toSentenceCase(instrument);
     return {
       text: sentenceCaseInstrument,
-      link: `/content/instruments/${instrument.toLowerCase().replace(/\s+/g, '-')}`
+      link: `/pdfs/instruments/${instrument.toLowerCase().replace(/\s+/g, '-')}`
     };
   })
 };
@@ -92,7 +92,7 @@ console.log('Instrument navigation item generated successfully.');
 // Create sidebar items for the instruments
 const instrumentSidebarItems = topInstruments.map(instrument => ({
   text: toSentenceCase(instrument),
-  link: `/content/instruments/${instrument.toLowerCase().replace(/\s+/g, '-')}`
+  link: `/pdfs/instruments/${instrument.toLowerCase().replace(/\s+/g, '-')}`
 }));
 
 // Read the existing sidebar data

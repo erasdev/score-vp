@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: Browse Collection
-      link: /content/old-time-feeling
+      link: /pdfs/old-time-feeling
     - theme: alt
       text: Make a Request
       link: /request

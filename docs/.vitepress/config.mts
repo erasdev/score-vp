@@ -44,8 +44,8 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     logo: {
-      light: './dog.svg',
-      dark: './dog-inverted.svg',
+      light: '/dog.svg',
+      dark: '/dog-inverted.svg',
       alt: 'Ricky Bob Dog'
     },
     nav: [
@@ -63,14 +63,8 @@ export default defineConfig({
   // Add this to ensure admin routes and uploads are handled correctly
   rewrites: {
     'admin/:path*': 'public/admin/:path*',
-    'uploads/:path*': 'public/uploads/:path*',
-    'pdf-index.json': 'public/pdf-index.json',
-    'content/:path*': 'public/uploads/:path*',
-    'dog.svg': 'public/dog.svg',
-    'dog-inverted.svg': 'public/dog-inverted.svg'
   },
   vite: {
-    publicDir: '../public',
     server: {
       fs: {
         strict: false,
@@ -78,10 +72,9 @@ export default defineConfig({
       }
     },
     build: {
-      assetsDir: 'assets',
       rollupOptions: {
         output: {
-          assetFileNames: 'assets/[name].[hash][extname]'
+          format: 'es'
         }
       }
     }
@@ -90,6 +83,4 @@ export default defineConfig({
   outDir: '../dist',
   base: '/',
   cleanUrls: true,
-  // Add explicit asset handling
-  assetsDir: 'assets'
 })

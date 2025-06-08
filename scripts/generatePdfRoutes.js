@@ -7,11 +7,11 @@ const rootDir = join(__dirname, '..');
 
 // Read the PDF index
 const pdfIndex = JSON.parse(
-  readFileSync(join(rootDir, 'public', 'pdf-index.json'), 'utf-8')
+  readFileSync(join(rootDir, 'docs', '.vitepress', 'public', 'pdf-index.json'), 'utf-8')
 );
 
 // Ensure the content directory exists
-const contentDir = join(rootDir, 'docs', 'content');
+const contentDir = join(rootDir, 'docs', 'pdfs');
 if (!existsSync(contentDir)) {
   mkdirSync(contentDir, { recursive: true });
 }
@@ -49,7 +49,7 @@ ${entry.description || ''}
 
 <div class="score-viewer">
   <iframe 
-    src="/content/${filename}#toolbar=0&navpanes=0" 
+    src="/uploads/${filename}#toolbar=0&navpanes=0" 
     width="100%" 
     height="800px" 
     frameborder="0"
@@ -100,7 +100,7 @@ ${entry.description || ''}
 const sidebarItems = pdfIndex
   .map(entry => ({
     text: entry.title,
-    link: `/content/${entry.slug}`
+    link: `/pdfs/${entry.slug}`
   }))
   .sort((a, b) => a.text.localeCompare(b.text));
 

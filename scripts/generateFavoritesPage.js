@@ -7,14 +7,14 @@ const rootDir = join(__dirname, '..');
 
 // Read the PDF index
 const pdfIndex = JSON.parse(
-  readFileSync(join(rootDir, 'public', 'pdf-index.json'), 'utf-8')
+  readFileSync(join(rootDir, 'docs', '.vitepress', 'public', 'pdf-index.json'), 'utf-8')
 );
 
 // Find all favorite PDFs
 const favoritePdfs = pdfIndex.filter(entry => entry.favorite);
 
 // Ensure the content directory exists
-const contentDir = join(rootDir, 'docs', 'content');
+const contentDir = join(rootDir, 'docs', '.vitepress', 'pdfs');
 if (!existsSync(contentDir)) {
   mkdirSync(contentDir, { recursive: true });
 }
@@ -29,7 +29,7 @@ next: false
 
 # Favorite Sheet Music
 
-${favoritePdfs.map(pdf => `- [${pdf.title}](/content/${pdf.slug})`).join('\n')}
+${favoritePdfs.map(pdf => `- [${pdf.title}](/pdfs/${pdf.slug})`).join('\n')}
 `;
 
 // Create the file path
@@ -42,7 +42,7 @@ console.log('Generated favorites page');
 // Create navigation item for favorites
 const favoritesNavItem = {
   text: 'Favorites',
-  link: '/content/favorites'
+  link: '/pdfs/favorites'
 };
 
 // Write the favorites navigation item to a file
@@ -62,7 +62,7 @@ if (!sidebarData.items) {
 // Create the favorites section
 const favoritesSection = {
   text: 'Favorites',
-  link: '/content/favorites'
+  link: '/pdfs/favorites'
 };
 
 // Insert favorites at the beginning of the sidebar

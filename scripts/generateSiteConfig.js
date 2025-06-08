@@ -12,14 +12,14 @@ const defaultConfig = {
   "tag-badge-color": "#2c662d"
 };
 
-// Ensure the public directory exists
-const publicDir = join(process.cwd(), 'public');
-if (!existsSync(publicDir)) {
-  mkdirSync(publicDir, { recursive: true });
+// Ensure the VitePress public directory exists
+const vitepressPublicDir = join(process.cwd(), 'docs', '.vitepress', 'public');
+if (!existsSync(vitepressPublicDir)) {
+  mkdirSync(vitepressPublicDir, { recursive: true });
 }
 
-// Write the site configuration to a file
-const configPath = join(publicDir, 'site-config.json');
+// Write the site configuration to a file in VitePress public directory
+const configPath = join(vitepressPublicDir, 'site-config.json');
 
 // Check if config already exists and preserve it if it does
 let existingConfig = defaultConfig;
@@ -39,4 +39,4 @@ if (existsSync(configPath)) {
 
 writeFileSync(configPath, JSON.stringify(existingConfig, null, 2));
 
-console.log('Site configuration file generated successfully.'); 
+console.log('Site configuration file generated successfully in VitePress public directory.'); 

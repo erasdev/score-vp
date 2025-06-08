@@ -2,7 +2,7 @@
   "items": [
     {
       "text": "Favorites",
-      "link": "/content/favorites"
+      "link": "/pdfs/favorites"
     },
     {
       "text": "Genres",
@@ -10,7 +10,7 @@
       "items": [
         {
           "text": "Old-Time",
-          "link": "/content/genres/old-time"
+          "link": "/pdfs/genres/old-time"
         }
       ]
     },
@@ -20,13 +20,13 @@
       "items": [
         {
           "text": "Uke",
-          "link": "/content/instruments/uke"
+          "link": "/pdfs/instruments/uke"
         }
       ]
     },
     {
       "text": "Old Time Feeling",
-      "link": "/content/old-time-feeling"
+      "link": "/pdfs/old-time-feeling"
     }
   ]
 }

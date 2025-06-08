@@ -29,7 +29,7 @@ const toSentenceCase = (text) => {
 
 // Read the PDF index
 const pdfIndex = JSON.parse(
-  readFileSync(join(rootDir, 'public', 'pdf-index.json'), 'utf-8')
+  readFileSync(join(rootDir, 'docs', '.vitepress', 'public', 'pdf-index.json'), 'utf-8')
 );
 
 // Collect all genres and their frequencies
@@ -47,7 +47,7 @@ const topGenres = Object.entries(genreFrequency)
   .map(([genre]) => genre);
 
 // Ensure the genres directory exists
-const genresDir = join(rootDir, 'docs', 'content', 'genres');
+const genresDir = join(rootDir, 'docs', '.vitepress', 'pdfs', 'genres');
 if (!existsSync(genresDir)) {
   mkdirSync(genresDir, { recursive: true });
 }
@@ -73,7 +73,7 @@ next: false
 
 ${genrePdfs.map(pdf => {
   const artistText = pdf.artists?.length ? ` - ${pdf.artists.join(', ')}` : '';
-  return `- [${pdf.title}](/content/${pdf.slug})${artistText}`;
+  return `- [${pdf.title}](/pdfs/${pdf.slug})${artistText}`;
 }).join('\n')}
 `;
 
@@ -93,7 +93,7 @@ const genreNavItem = {
     const slug = sentenceCaseGenre.toLowerCase().replace(/\s+/g, '-');
     return {
       text: sentenceCaseGenre,
-      link: `/content/genres/${slug}`
+      link: `/pdfs/genres/${slug}`
     };
   })
 };
@@ -109,7 +109,7 @@ const genreSidebarItems = topGenres.map(genre => {
   const slug = sentenceCaseGenre.toLowerCase().replace(/\s+/g, '-');
   return {
     text: sentenceCaseGenre,
-    link: `/content/genres/${slug}`
+    link: `/pdfs/genres/${slug}`
   };
 });
 
