@@ -24,6 +24,7 @@ collections:
           - { label: "Site Description", name: "description", widget: "text", required: false }
           - { label: "Tagline", name: "tagline", widget: "text", required: false }
           - { label: "Favorites Description", name: "favorites-description", widget: "text", required: false }
+          - { label: "Show Favorites Page", name: "show-favorites-page", widget: "boolean", default: true }
           - { label: "Accent Color", name: "accent-color", widget: "color", required: false }
           - { label: "Genre Badge Color", name: "genre-badge-color", widget: "color", required: false }
           - { label: "Instrument Badge Color", name: "instrument-badge-color", widget: "color", required: false }

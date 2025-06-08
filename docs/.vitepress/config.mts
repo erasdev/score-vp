@@ -7,6 +7,11 @@ import { dirname } from 'path'
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = dirname(__filename)
 
+// Read the site configuration
+const siteConfig = JSON.parse(
+  readFileSync(join(__dirname, '..', 'public', 'site-config.json'), 'utf-8')
+)
+
 // Read the generated sidebar data
 const sidebarData = JSON.parse(
   readFileSync(join(__dirname, 'sidebar.json'), 'utf-8')
@@ -26,6 +31,19 @@ const instrumentNavItem = JSON.parse(
 const favoritesNavItem = JSON.parse(
   readFileSync(join(__dirname, 'favorites-nav.json'), 'utf-8')
 )
+
+// Build navigation items array
+const navItems = [
+  { text: 'Home', link: '/' }
+]
+
+// Only add favorites navigation if enabled
+if (siteConfig['show-favorites-page']) {
+  navItems.push(favoritesNavItem)
+}
+
+// Add other navigation items
+navItems.push(genreNavItem, instrumentNavItem)
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -48,12 +66,7 @@ export default defineConfig({
       dark: '/dog-inverted.svg',
       alt: 'Ricky Bob Dog'
     },
-    nav: [
-      { text: 'Home', link: '/' },
-      favoritesNavItem,
-      genreNavItem,
-      instrumentNavItem
-    ],
+    nav: navItems,
     sidebar: [sidebarData],
   
     search: {

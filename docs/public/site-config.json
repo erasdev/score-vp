@@ -3,6 +3,7 @@
   "description": "A curated collection of sheet music.",
   "tagline": "Sheet music for everyone.",
   "favorites-description": "A collection of my favorite pieces.",
+  "show-favorites-page": true,
   "accent-color": "#646cff",
   "genre-badge-color": "#166534",
   "instrument-badge-color": "#0066cc",

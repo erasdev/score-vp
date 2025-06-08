@@ -5,6 +5,18 @@ import { fileURLToPath } from 'node:url';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, '..');
 
+// Read the site configuration
+const siteConfig = JSON.parse(
+  readFileSync(join(rootDir, 'docs', 'public', 'site-config.json'), 'utf-8')
+);
+
+// Only proceed if favorites page is enabled
+if (!siteConfig['show-favorites-page']) {
+  console.log('Favorites page is disabled in site configuration - skipping generation');
+  // Exit with success code since this is an expected condition
+  process.exit(0);
+}
+
 // Read the PDF index
 const pdfIndex = JSON.parse(
   readFileSync(join(rootDir, 'docs', 'public', 'pdf-index.json'), 'utf-8')
@@ -29,7 +41,7 @@ next: false
 
 # Favorites
 
-${siteConfig.favoritesDescription || ''}
+${siteConfig['favorites-description'] || ''}
 
 ${favoritePdfs.length === 0 ? 'No favorites yet. Check back soon!' : ''}
 
