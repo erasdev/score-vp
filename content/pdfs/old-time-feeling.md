@@ -1,5 +1,6 @@
 ---
 draft: false
+favorite: true
 title: Old Time Feeling
 artists:
   - Guy Clark
