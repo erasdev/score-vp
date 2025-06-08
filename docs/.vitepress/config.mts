@@ -63,7 +63,8 @@ export default defineConfig({
   // Add this to ensure admin routes and uploads are handled correctly
   rewrites: {
     'admin/:path*': 'public/admin/:path*',
-    'uploads/:path*': 'public/uploads/:path*'
+    'uploads/:path*': 'public/uploads/:path*',
+    'pdf-index.json': 'public/pdf-index.json'
   },
   vite: {
     publicDir: '../public',
