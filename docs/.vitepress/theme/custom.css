@@ -4,30 +4,48 @@
   
   /* Badge Colors */
   --genre-badge-color: #166534;
-  --genre-badge-color-light: #dcfce7;
   --instrument-badge-color: #0066cc;
-  --instrument-badge-color-light: #e6f3ff;
   --tag-badge-color: #2c662d;
-  --tag-badge-color-light: #f0f7e6;
 }
 
 /* Badge Styles */
 .badge-genre {
-  background-color: var(--genre-badge-color-light);
+  background-color: color-mix(in srgb, var(--genre-badge-color) 15%, white);
   color: var(--genre-badge-color);
-  border-color: var(--genre-badge-color);
+  border: 1px solid var(--genre-badge-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .badge-instrument {
-  background-color: var(--instrument-badge-color-light);
+  background-color: color-mix(in srgb, var(--instrument-badge-color) 15%, white);
   color: var(--instrument-badge-color);
-  border-color: var(--instrument-badge-color);
+  border: 1px solid var(--instrument-badge-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .badge-tag {
-  background-color: var(--tag-badge-color-light);
+  background-color: color-mix(in srgb, var(--tag-badge-color) 15%, white);
   color: var(--tag-badge-color);
-  border-color: var(--tag-badge-color);
+  border: 1px solid var(--tag-badge-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Hide site title and logo in the nav bar on the home page */
