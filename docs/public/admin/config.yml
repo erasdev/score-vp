@@ -4,7 +4,7 @@ backend:
 
 local_backend: true
 
-media_folder: "public/uploads"
+media_folder: "docs/public/uploads"
 public_folder: "/uploads"
 search: false
 editor:
