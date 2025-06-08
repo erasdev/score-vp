@@ -29,6 +29,10 @@ next: false
 
 # Favorites
 
+${siteConfig.favoritesDescription || ''}
+
+${favoritePdfs.length === 0 ? 'No favorites yet. Check back soon!' : ''}
+
 ${favoritePdfs.map(pdf => {
   const artistText = pdf.artists?.length ? ` - ${pdf.artists.join(', ')}` : '';
   return `- [${pdf.title}](/pdfs/${pdf.slug})${artistText}`;
