@@ -5,7 +5,7 @@
   "tagline": " ",
   "genre-badge-color": "#e1c822",
   "instrument-badge-color": "#b537a3",
-  "show-favorites-page": false,
+  "show-favorites-page": true,
   "title": "Ricky Bob Dog's Collection",
   "description": "Edited Site Description"
 }
