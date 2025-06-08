@@ -1,10 +1,10 @@
 ---
-title: Uke Sheet Music
+title: Uke
 aside: false
 prev: false
 next: false
 ---
 
-# Uke Sheet Music
+# Uke
 
 - [Old Time Feeling](/pdfs/old-time-feeling) - Guy Clark

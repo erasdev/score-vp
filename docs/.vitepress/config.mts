@@ -59,6 +59,33 @@ export default defineConfig({
       type: 'text/javascript',    
     }]
   ],
+  // Add site config to template data
+
+  transformPageData(pageData) {
+    if (pageData.frontmatter.layout === 'home') {
+      pageData.frontmatter.hero = {
+        name: siteConfig.title,
+        text: siteConfig.description,
+        tagline: siteConfig.tagline,
+        image: {
+          src: '/dog.svg',
+          alt: 'Dog'
+        },
+        actions: [
+          {
+            theme: 'brand',
+            text: 'Browse Collection',
+            link: '/pdfs/favorites'
+          },
+          {
+            theme: 'alt',
+            text: 'Make a Request',
+            link: 'https://github.com/vuejs/vitepress'
+          }
+        ]
+      }
+    }
+  },
   themeConfig: {
     siteTitle: false,
     logo: {

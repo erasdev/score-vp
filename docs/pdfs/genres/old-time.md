@@ -1,10 +1,10 @@
 ---
-title: Old-Time Sheet Music
+title: Old-Time
 aside: false
 prev: false
 next: false
 ---
 
-# Old-Time Sheet Music
+# Old-Time
 
 - [Old Time Feeling](/pdfs/old-time-feeling) - Guy Clark

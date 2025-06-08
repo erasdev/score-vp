@@ -12,7 +12,7 @@ next: false
 
 # Old Time Feeling
 
-By Guy Clark
+Guy Clark
 
 
 
