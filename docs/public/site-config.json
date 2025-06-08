@@ -1,11 +1,11 @@
 {
-  "title": "Ricky Bob Dog's Collection",
-  "description": "A curated collection of sheet music.",
-  "tagline": "Sheet music for everyone.",
-  "favorites-description": "A collection of my favorite pieces.",
+  "title": "Edited Site Title",
+  "description": "Edited Site Description",
+  "tagline": " ",
+  "favorites-description": "Edited favorites description",
   "show-favorites-page": true,
-  "accent-color": "#646cff",
-  "genre-badge-color": "#166534",
-  "instrument-badge-color": "#0066cc",
-  "tag-badge-color": "#2c662d"
+  "accent-color": "#b91b1b",
+  "genre-badge-color": "#e1c822",
+  "instrument-badge-color": "#b537a3",
+  "tag-badge-color": "#e6b638"
 }

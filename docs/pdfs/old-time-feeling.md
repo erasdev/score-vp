@@ -26,7 +26,7 @@ Guy Clark
 
 <div class="score-viewer">
   <iframe 
-    src="/uploads/old-time-feeling-in-c-for-uke-.pdf#toolbar=0&navpanes=0" 
+    src="/uploads/old-time-feeling-in-c-for-uke-.pdf" 
     width="100%" 
     height="800px" 
     frameborder="0"

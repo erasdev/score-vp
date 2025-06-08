@@ -18,6 +18,9 @@ interface SiteConfig {
   "tag-badge-color": string;
 }
 
+const colorMix = (color: string, opacity: number): string => {
+  return `color-mix(in srgb, ${color} ${opacity * 100}%, black)`;
+};
 
 const updateCssVariables = (colors: ThemeColors) => {
   const root = document.documentElement;
@@ -27,6 +30,11 @@ const updateCssVariables = (colors: ThemeColors) => {
 
   root.style.setProperty('--vp-button-brand-bg', colors["accent-color"]);
   root.style.setProperty('--vp-button-brand-border', colors["accent-color"]);
+  root.style.setProperty('--vp-button-brand-hover-bg', colorMix(colors["accent-color"], 0.85));
+  root.style.setProperty('--vp-button-brand-hover-border', colorMix(colors["accent-color"], 0.85));
+  root.style.setProperty('--vp-button-brand-hover-bg-dark', colorMix(colors["accent-color"], 0.85));
+  root.style.setProperty('--vp-button-brand-hover-border-dark', colorMix(colors["accent-color"], 0.85));
+  root.style.setProperty('--vp-button-brand-hover-text-dark', '#fff');
 
   root.style.setProperty('--genre-badge-color', colors["genre-badge-color"]);
   root.style.setProperty('--instrument-badge-color', colors["instrument-badge-color"]);

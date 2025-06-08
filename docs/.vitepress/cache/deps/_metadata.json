@@ -1,73 +1,58 @@
 {
-  "hash": "ffd08c2e",
+  "hash": "3f0c780d",
   "configHash": "515ecdd9",
-  "lockfileHash": "beab7837",
-  "browserHash": "70a9ba4b",
+  "lockfileHash": "6c41c597",
+  "browserHash": "21940003",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "cf21c0ee",
+      "fileHash": "36f2684f",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "1c0e6b1c",
+      "fileHash": "eb7ec0f2",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "0c7e5324",
+      "fileHash": "5b86903c",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "1a223933",
+      "fileHash": "d56518b4",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "2babad7a",
+      "fileHash": "b7f7411d",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "f1f500b0",
+      "fileHash": "5cec0e03",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../../node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "377c5093",
-      "needsInterop": false
-    },
-    "@heroicons/vue/24/outline/ChevronDownIcon.js": {
-      "src": "../../../../node_modules/@heroicons/vue/24/outline/esm/ChevronDownIcon.js",
-      "file": "@heroicons_vue_24_outline_ChevronDownIcon__js.js",
-      "fileHash": "0be87fea",
-      "needsInterop": false
-    },
-    "@heroicons/vue/24/outline": {
-      "src": "../../../../node_modules/@heroicons/vue/24/outline/esm/index.js",
-      "file": "@heroicons_vue_24_outline.js",
-      "fileHash": "8bafdf57",
+      "fileHash": "18204732",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-3KOT3W6A": {
-      "file": "chunk-3KOT3W6A.js"
+    "chunk-4JIJOCLY": {
+      "file": "chunk-4JIJOCLY.js"
     },
     "chunk-Z6SASFBJ": {
       "file": "chunk-Z6SASFBJ.js"
-    },
-    "chunk-4JIJOCLY": {
-      "file": "chunk-4JIJOCLY.js"
     },
     "chunk-FA4MWVOB": {
       "file": "chunk-FA4MWVOB.js"

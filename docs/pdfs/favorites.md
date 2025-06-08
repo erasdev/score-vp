@@ -7,7 +7,7 @@ next: false
 
 # Favorites
 
-A collection of my favorite pieces.
+Edited favorites description
 
 
 
