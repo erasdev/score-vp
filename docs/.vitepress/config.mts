@@ -68,7 +68,8 @@ export default defineConfig({
         text: siteConfig.description,
         tagline: siteConfig.tagline,
         image: {
-          src: '/dog.svg',
+          light: '/dog.svg',
+          dark: '/inverted-dog.svg',
           alt: 'Dog'
         },
         actions: [
@@ -90,7 +91,7 @@ export default defineConfig({
     siteTitle: false,
     logo: {
       light: '/dog.svg',
-      dark: '/dog-inverted.svg',
+      dark: '/inverted-dog.svg',
       alt: 'Ricky Bob Dog'
     },
     nav: navItems,
