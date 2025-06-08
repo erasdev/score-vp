@@ -77,9 +77,11 @@ export default defineConfig({
           format: 'es'
         }
       }
-    }
+    },
+    publicDir: 'public'
   },
   // Ensure PDFs are served correctly
   base: '/',
   cleanUrls: true,
+  outDir: 'dist',
 })
