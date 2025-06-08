@@ -44,8 +44,8 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     logo: {
-      light: '/dog.svg',
-      dark: '/dog-inverted.svg',
+      light: './dog.svg',
+      dark: './dog-inverted.svg',
       alt: 'Ricky Bob Dog'
     },
     nav: [
@@ -64,7 +64,10 @@ export default defineConfig({
   rewrites: {
     'admin/:path*': 'public/admin/:path*',
     'uploads/:path*': 'public/uploads/:path*',
-    'pdf-index.json': 'public/pdf-index.json'
+    'pdf-index.json': 'public/pdf-index.json',
+    'content/:path*': 'public/uploads/:path*',
+    'dog.svg': 'public/dog.svg',
+    'dog-inverted.svg': 'public/dog-inverted.svg'
   },
   vite: {
     publicDir: '../public',
