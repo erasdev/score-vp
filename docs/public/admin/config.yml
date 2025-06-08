@@ -7,8 +7,9 @@ local_backend: true
 media_folder: "public/uploads"
 public_folder: "/uploads"
 search: false
- editor:
-     preview: false
+editor:
+  preview: false
+
 collections:
   - name: "site"
     label: "Site Settings"

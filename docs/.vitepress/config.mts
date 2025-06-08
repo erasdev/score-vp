@@ -78,7 +78,7 @@ export default defineConfig({
         }
       }
     },
-    publicDir: 'public'
+    publicDir: 'public',
   },
   // Ensure PDFs are served correctly
   base: '/',
