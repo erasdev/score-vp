@@ -20,7 +20,7 @@ collections:
         label: "Site Configuration"
         name: "site-config"
         fields:
-          - { label: "Site Title", name: "title", widget: "string", required: true }
+          - { label: "Site Title", name: "title", widget: "string", required: false }
           - { label: "Site Description", name: "description", widget: "text", required: false }
           - { label: "Tagline", name: "tagline", widget: "text", required: false }
           - { label: "Favorites Description", name: "favorites-description", widget: "text", required: false }
