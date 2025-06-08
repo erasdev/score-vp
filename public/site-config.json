@@ -5,7 +5,7 @@
   "tagline": " ",
   "genre-badge-color": "#e1c822",
   "instrument-badge-color": "#b537a3",
-  "show-favorites-page": true,
+  "show-favorites-page": false,
   "title": "Edited Site Title",
   "description": "Edited Site Description"
 }
