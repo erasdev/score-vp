@@ -11,7 +11,7 @@ const pdfIndex = JSON.parse(
 );
 
 // Ensure the content directory exists
-const contentDir = join(rootDir, 'docs', 'pdfs');
+const contentDir = join(rootDir, 'docs', '.vitepress', 'pdfs');
 if (!existsSync(contentDir)) {
   mkdirSync(contentDir, { recursive: true });
 }
