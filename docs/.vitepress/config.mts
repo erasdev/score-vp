@@ -72,10 +72,20 @@ export default defineConfig({
         strict: false,
         allow: ['..']
       }
+    },
+    build: {
+      assetsDir: 'assets',
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name].[hash][extname]'
+        }
+      }
     }
   },
   // Ensure PDFs are served correctly
   outDir: '../dist',
   base: '/',
-  cleanUrls: true
+  cleanUrls: true,
+  // Add explicit asset handling
+  assetsDir: 'assets'
 })
