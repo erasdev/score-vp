@@ -1,0 +1,21 @@
+[build]
+  command = "npm run docs:build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Handle admin routes
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
+  force = true
+
+# Handle all other routes for client-side routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  conditions = {Path = ["!/admin/*"]} 
