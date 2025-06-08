@@ -80,7 +80,6 @@ export default defineConfig({
     }
   },
   // Ensure PDFs are served correctly
-  outDir: 'dist',
   base: '/',
   cleanUrls: true,
 })
