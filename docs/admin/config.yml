@@ -43,6 +43,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Favorite', name: 'favorite', widget: 'boolean', default: false }
       - { label: "Title", name: "title", widget: "string", required: true }
       - { label: "Artists", name: "artists", widget: "list", required: false }
       - { label: "Instruments", name: "instruments", widget: "list", required: false  }

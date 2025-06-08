@@ -3,22 +3,28 @@
 layout: home
 
 hero:
-  name: "SCORE"
-  text: "Sheet Collection & Organized Reader Experience"
-  tagline: My great project tagline
+  name: "Ricky Bob Dog's Collection"
+  text: "A curated collection of sheet music"
+  tagline: Sheet music for everyone
+  image:
+    src: /dog.svg
+    alt: Ricky Bob Dog
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Browse Collection
+      link: /content/old-time-feeling
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Make a Request
+      link: /request
 
-features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+
+<style>
+.VPHero .image {
+  width: auto;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+
+</style>

@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "text": "Favorites",
+      "link": "/content/favorites"
+    },
+    {
+      "text": "Genres",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Old-Time",
+          "link": "/content/genres/old-time"
+        }
+      ]
+    },
+    {
+      "text": "Instruments",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Uke",
+          "link": "/content/instruments/uke"
+        }
+      ]
+    },
+    {
+      "text": "Old Time Feeling",
+      "link": "/content/old-time-feeling"
+    }
+  ]
+}

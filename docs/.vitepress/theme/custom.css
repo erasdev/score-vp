@@ -1,0 +1,18 @@
+/* Custom theme styles */
+:root {
+  --vp-c-brand: #646cff;
+  --vp-c-brand-light: #747bff;
+}
+
+
+
+/* Hide site title and logo in the nav bar on the home page */
+.VPNav:has(.home) .title {
+  display: none !important;
+}
+
+/* Scale logo images within title links */
+.title a .logo {
+  margin-left: 25px;
+  transform: scale(2.5);
+}

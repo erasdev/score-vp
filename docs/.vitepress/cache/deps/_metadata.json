@@ -1,35 +1,71 @@
 {
-  "hash": "b603caea",
-  "configHash": "c1eac7e1",
-  "lockfileHash": "555f1b3e",
-  "browserHash": "290df221",
+  "hash": "ffd08c2e",
+  "configHash": "515ecdd9",
+  "lockfileHash": "beab7837",
+  "browserHash": "70a9ba4b",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "fb7a3bbf",
+      "fileHash": "cf21c0ee",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "2087595d",
+      "fileHash": "1c0e6b1c",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "62aac848",
+      "fileHash": "0c7e5324",
       "needsInterop": false
     },
-    "@theme/index": {
-      "src": "../../../../node_modules/vitepress/dist/client/theme-default/index.js",
-      "file": "@theme_index.js",
-      "fileHash": "61a783a8",
+    "vitepress > @vueuse/integrations/useFocusTrap": {
+      "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
+      "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
+      "fileHash": "1a223933",
+      "needsInterop": false
+    },
+    "vitepress > mark.js/src/vanilla.js": {
+      "src": "../../../../node_modules/mark.js/src/vanilla.js",
+      "file": "vitepress___mark__js_src_vanilla__js.js",
+      "fileHash": "2babad7a",
+      "needsInterop": false
+    },
+    "vitepress > minisearch": {
+      "src": "../../../../node_modules/minisearch/dist/es/index.js",
+      "file": "vitepress___minisearch.js",
+      "fileHash": "f1f500b0",
+      "needsInterop": false
+    },
+    "pinia": {
+      "src": "../../../../node_modules/pinia/dist/pinia.mjs",
+      "file": "pinia.js",
+      "fileHash": "377c5093",
+      "needsInterop": false
+    },
+    "@heroicons/vue/24/outline/ChevronDownIcon.js": {
+      "src": "../../../../node_modules/@heroicons/vue/24/outline/esm/ChevronDownIcon.js",
+      "file": "@heroicons_vue_24_outline_ChevronDownIcon__js.js",
+      "fileHash": "0be87fea",
+      "needsInterop": false
+    },
+    "@heroicons/vue/24/outline": {
+      "src": "../../../../node_modules/@heroicons/vue/24/outline/esm/index.js",
+      "file": "@heroicons_vue_24_outline.js",
+      "fileHash": "8bafdf57",
       "needsInterop": false
     }
   },
   "chunks": {
+    "chunk-3KOT3W6A": {
+      "file": "chunk-3KOT3W6A.js"
+    },
+    "chunk-Z6SASFBJ": {
+      "file": "chunk-Z6SASFBJ.js"
+    },
     "chunk-4JIJOCLY": {
       "file": "chunk-4JIJOCLY.js"
     },
