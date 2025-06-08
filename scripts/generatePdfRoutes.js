@@ -40,11 +40,7 @@ ${entry.artists?.length ? `${entry.artists.join(', ')}` : ''}
 ${entry.description || ''}
 
 <div class="metadata-badges">
-  <div class="badge-list">
-    ${entry.genres.map(genre => `    <span class="vp-raw badge badge-genre">${genre}</span>`).join('\n')}
-    ${entry.instruments.map(instrument => `    <span class="badge badge-instrument">${instrument}</span>`).join('\n')}
-    ${entry.tags.map(tag => `    <span class="badge badge-tag">${tag}</span>`).join('\n')}
-  </div>
+  <div class="badge-list">${entry.genres.map(genre => `<span class="badge badge-genre">${genre}</span>`).join('')}${entry.instruments.map(instrument => `<span class="badge badge-instrument">${instrument}</span>`).join('')}${entry.tags.map(tag => `<span class="badge badge-tag">${tag}</span>`).join('')}</div>
 </div>
 
 <div class="score-viewer">
