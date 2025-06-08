@@ -7,8 +7,9 @@ title: Request
 
 Fill out the form below to request a piece of sheet music. We'll do our best to find or create it for you.
 
-<form name="request" method="POST" data-netlify="true" data-netlify-title="Request for {title}" netlify-honeypot="bot-field" class="request-form">
+<form name="request" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="request-form">
   <input type="hidden" name="form-name" value="request" />
+  <input type="hidden" name="subject" value="Request for {title}" />
   <p class="hidden">
     <label>Don't fill this out if you're human: <input name="bot-field" /></label>
   </p>
