@@ -1,8 +1,8 @@
 ---
-draft: false
+draft: true
 favorite: false
-title: I Hope You Dance
+title: I Hope You Dance Ukulele
 instruments:
-  - Guitar
-file: /uploads/i-hope-you-dance-g-w_guitar-chords.pdf
+  - Ukulele
+file: /uploads/i-hope-you-dance-g-w_ukulele-chords.pdf
 ---
